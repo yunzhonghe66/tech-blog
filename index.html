@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>技术笔记 · yunzhonghe66</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>技术笔记</h1>
+  <p class="sub">yunzhonghe66 · 折腾免费云服务的一些记录</p>
+  <nav>
+    <a href="#post-1">云电脑初体验</a>
+    <a href="#post-2">Pxxl 初探</a>
+    <a href="#post-3">本站是怎么搭的</a>
+  </nav>
+</header>
+
+<main>
+  <article id="post-1">
+    <h2>免费云电脑初体验：Simular Box</h2>
+    <p class="meta">2026-11-10 · 云电脑</p>
+    <p>Simular Box 是一台免费的云上 Ubuntu 桌面，专门给 AI Agent 当远程工作环境。注册只用 Google 账号，不绑卡，一个账号一台机器。</p>
+    <p>我这台实测配置：2 核 CPU、3.8GB 内存、20GB 硬盘，Ubuntu 24.04.5。机房在美国爱荷华州（Google Cloud us-central1），机上时钟是 UTC。</p>
+    <p>免费额度是每天 1000 credits，模型调用才扣，机器本身不花钱。不用的时候它自己休眠，下次连几秒就醒。2 核 4GB 跑跑脚本、开开浏览器够了，渲染视频、大编译就别指望了。</p>
+    <p>Agent 通过 MCP 接入，装好之后就能在上面开浏览器、跑终端、读写文件，相当于多了一台一直在云端的电脑。</p>
+  </article>
+
+  <article id="post-2">
+    <h2>Pxxl 免费托管初探</h2>
+    <p class="meta">2026-11-10 · 托管</p>
+    <p>Pxxl 是个免费容器托管平台，注册支持 Google、GitHub 或邮箱，不用绑卡。免费版有 5 个项目位（1 个 Web 服务 + 4 个静态站）、1 个自定义域名，每个项目自动给一个免费子域名，自带 HTTPS。</p>
+    <p>机房在拉各斯、纽伦堡、巴黎、赫尔辛基 / 哥本哈根和纽约，没有亚洲机房，更没有台湾机房，国内访问速度一般。</p>
+    <p>踩坑记录：拿它搭代理节点，项目上线后不久就被标记 Project Flagged，部署和域名访问都被暂停了。免费平台对这类项目盯得很紧，普通网站可以试，代理就别往上放了。</p>
+  </article>
+
+  <article id="post-3">
+    <h2>本站是怎么搭的</h2>
+    <p class="meta">2026-11-10 · 建站</p>
+    <p>这个站就是一次实验：纯静态 HTML + CSS，没有任何构建步骤，代码放在 GitHub 仓库，用 Pxxl 的免费静态站托管，部署完自动给一个免费子域名。</p>
+    <p>流程很简单：写好 index.html 和 style.css，推到 GitHub，在 Pxxl 里从仓库建静态站项目，等状态变成 Deployed 就能访问了。全程不用绑卡、不用自己买域名。</p>
+    <p>如果你也想试，记住两点：静态站最省心，不用操心运行环境；别拿免费托管做平台明令禁止的事，不然项目会被标记停用。</p>
+  </article>
+</main>
+
+<footer>
+  <p>© 2026 yunzhonghe66 · 纯静态页面，托管于 Pxxl 免费版</p>
+</footer>
+</body>
+</html>
